@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   return (
     <>
@@ -28,6 +29,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <p>API URL: </p>
+      <a href={apiUrl}>{apiUrl}</a>
     </>
   )
 }
